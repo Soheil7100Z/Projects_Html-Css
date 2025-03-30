@@ -1,0 +1,624 @@
+html{
+    font-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin-top: 1rem;
+}
+
+:root {
+    --text-2xs : 0.7rem;
+    --text-xs : 0.8rem;
+    --text-sm : 0.9rem;
+    --text-basic : 1rem;
+    --text-md : 1.1rem;
+    --text-mlg :1.5rem;
+    --text-lg : 1.2rem;
+    --text-xl : 1.8rem;
+    --text-2xl : 2.5rem;
+    --text-3xl : 3rem;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8.9rem;
+    font-size: var(--text-sm);
+    /* position: relative; */
+
+}
+.header .Micrisoft {
+    position: absolute;
+    top: 1.13rem;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #2d3436;
+
+}
+
+.header .options {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-left: 10rem;
+
+}
+.header .right_nav {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+}
+.header .right_nav {
+    display: flex;
+}
+
+.header .Alles_Von {
+    margin-right: .5rem;
+
+}
+.header .macrosoft_list {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.header .checkmark {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+}
+
+.header .tick  {
+
+    width: 6px;
+    height: 6px;
+    border: solid #2d3436;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    margin-top: .5rem;
+
+}
+
+.header .suchen, .shop, .profile {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+/* -----------------auto list-------------------------------- */
+.header .auto_list {
+    background-color: #e9ebee;
+    width: 65% ;
+    /* height:  30rem; */
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 27rem;
+    justify-content: left;
+}
+
+
+
+ .header .aaa {
+    line-height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: right; */
+    white-space: nowrap;
+    font-size: var(--text-xs);
+    margin: 1rem 1rem 0 2rem ;
+ }
+ .header .aaa a:hover  {
+    text-decoration: underline;
+ }
+
+.header .first_bold {
+    font-weight: bold;
+}
+/* <!-- ---------------------Slider--------------------------------------------- --> */
+
+.initialBG .initial_linkTag {
+    text-decoration: none;
+    color: black;
+    margin-top: 1rem;
+    width: 100%;
+    height: 18rem;
+
+    display: flex;
+    background: linear-gradient(160deg, rgba(164, 180, 233, 0.8), rgba(214, 214, 241, 0.842) 60% );
+}
+
+
+.initialBG .left_intialBG .p1 {
+    margin: 20rem 1.8rem 0 1.8rem;
+    display: grid;
+}
+.initialBG .TheBold_titleOf_slide {
+
+    font-size: var(--text-mlg);
+
+    font-weight: bold
+}
+.initialBG .description_title {
+    font-size: var(--text-ms);
+    line-height: 1.8rem;
+    margin: 2rem 0;
+}
+.initialBG .kaufen_icon  {
+
+    background-color:#3c40c6;
+    padding: 1rem 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .3rem;
+    text-decoration: none;
+    font-size: var(--text-ms);
+    height: 1rem;
+    width: 10.2rem;
+
+
+
+}
+
+.initialBG .kaufen_icon:hover {
+    background-color: #5156eb;
+}
+
+
+
+
+.initialBG .right_initialBG .p1 {
+    width: 100%;
+    height: 100%;
+}
+
+/* .initialBG .right_initialBG .p1 img {
+    width: inherit;
+    height: inherit;
+
+} */
+@media (min-width: 440px) {
+    .initialBG .initial_linkTag {
+        height: 40rem;
+    }
+    .initialBG .left_intialBG {
+        display: flex;
+        flex-basis: 50%;
+    }
+    .initialBG .left_intialBG .p1 {
+        margin: 10rem 9rem;
+    }
+    .initialBG .right_intialBG {
+        flex-basis: 50%;
+    }
+    .initialBG .TheBold_titleOf_slide {
+        font-size: var(--text-2xl);
+    }
+    .initialBG .kaufen_icon {
+        font-size: var(--text-md);
+        height: 1.2rem;
+        width: 11.2rem;
+    }
+    .initialBG .description_title {
+        font-size: var(--text-md);
+    }
+  }
+
+
+/* <!-- ------------------five icons under slider------------------------------------------------ --> */
+
+.five_icons {
+    display: flex;
+    flex-direction: column;
+    padding-top: 23rem;
+    /* margin: 5rem 0rem; */
+    margin: 5rem 0rem;
+    justify-content: center;
+
+    gap: 4rem;
+}
+/* @media (min-width: 440px) {
+    .five_icons {
+        padding-top: 20rem;
+    }
+} */
+
+.five_icons a div {
+    color: #3c40c6;
+    font-weight: bold;
+    font-size: var(--text-ms);
+}
+
+@media (min-width: 440px) {
+    .five_icons {
+        padding-top: 0rem;
+        flex-direction: row;
+        align-items: end;
+        font-size: var(--text-md);
+
+    }
+    .five_icons a div {
+        font-size: var(--text-md);
+
+    }
+  }
+
+/* <!-- ------------------Items for sales , four lists-------------------------- --> */
+.lower_container {
+    /* margin: 0 7rem ; */
+}
+
+@media (min-width: 900px) {
+    .lower_container {
+        margin: 0 7rem ;
+    }
+}
+
+.four_list {
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    justify-items: center;
+    /* margin: 8rem 5rem; */
+    margin: 8rem 0;
+    /* gap: 1rem; */
+    /* justify-self: center; */
+}
+
+.four_list .p1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 23.5rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13),
+     0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
+
+    /* padding-bottom: .1rem; */
+    margin-bottom: 3rem;
+}
+
+
+.four_list .bold_title_box {
+    font-size: var(--text-mlg);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0 1.4rem;
+}
+.four_list .description_box {
+    font-size: var(--text-ms);
+    line-height: 1.4;
+    padding: 0 1.4rem;
+}
+
+.four_list .p1 .general_fourIcons {
+    background-color: #3c40c6;
+    margin-top: 3rem;
+    padding: 1rem 1.3rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .3rem;
+    height: 1rem;
+    margin: 2rem 1.4rem 1.5rem 1.4rem ;
+    align-self: self-start;
+
+}
+
+.four_list .p1 .general_fourIcons:hover {
+    background-color: #5156eb;
+}
+
+
+.four_list .p1 img {
+    width: 23.5rem;
+    height: 13.78rem;
+    margin-bottom: 2rem;
+    /* align-self: self-start; */
+}
+
+@media (min-width: 440px) {
+    .four_list {
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+        justify-items: normal;
+    }
+    .four_list .p1 {
+        margin-bottom: 0rem;
+        position: relative;
+        padding-bottom: 7rem;
+    }
+
+    .four_list .p1 .general_fourIcons{
+        position: absolute;
+        top : 25rem;
+        align-self: normal;
+    }
+    .four_list .bold_title_box {
+        font-size: var(--text-xl);
+    }
+
+    .four_list .description_box {
+        font-size: var(--text-md);
+    }
+}
+
+
+/* <!--------------------- game pass part ---------------------------------------> */
+
+.gamePass_Linktag {
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+
+    /* margin: 8rem 7rem; */
+    margin: 8rem 0;
+    text-decoration: none;
+    max-width: 97.6%;
+    height: 38rem;
+
+}
+
+
+
+.gamePass_Linktag .left_gamepass {
+
+    flex-basis: 35%;
+    color: black;
+    margin: 3rem 2rem;
+    align-content: center;
+}
+
+.gamePass_Linktag .title_gamePass {
+    font-size: var(--text-xl);
+    font-weight: bold;
+
+}
+.gamePass_Linktag .description_gamePass {
+    font-size: var(--text-ms);
+    line-height: 1.4;
+    margin:2rem 0 3.5rem 0rem;
+}
+
+
+
+.gamePass_Linktag .right_gamepass {
+    flex-basis: 65%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.gamePass_Linktag .right_gamepass img {
+    width: inherit;
+    height: inherit;
+
+}
+
+.gamePass_Linktag .kaufenIcon_gamePass {
+    background-color: #3c40c6;
+    font-weight: bold;
+    font-size: var(--text-ms);
+    color: white;
+    padding: .8rem 1rem;
+
+    border-radius: .4rem;
+    /* width: 5.9rem; */
+    display: inline;
+
+
+ }
+ .gamePass_Linktag .kaufenIcon_gamePass:hover {
+    background-color: #5156eb;
+ }
+
+ @media (min-width: 440px) {
+    .gamePass_Linktag {
+    background-color: #161a1b;
+    display: flex;
+    flex-direction: row;
+    }
+    .gamePass_Linktag .left_gamepass {
+        margin: 12rem 8rem;
+        color: white;
+    }
+    .gamePass_Linktag .title_gamePass {
+        font-size: var(--text-3xl);
+    }
+    .gamePass_Linktag .description_gamePass {
+        font-size: var(--text-md);
+    }
+    .gamePass_Linktag .kaufenIcon_gamePass {
+        font-size: var(--text-md);
+        padding: 1rem 1.3rem;
+        /* width: 5.9rem; */
+    }
+
+ }
+
+
+/* -----------fur unternehmen------------------- */
+
+.fur_unternehmen {
+    font-size: var(--text-mlg);
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    margin-left: 2rem;
+}
+
+@media (min-width: 440px) {
+    .fur_unternehmen {
+        font-size: var(--text-2xl);
+        margin-left: 0;
+
+    }
+}
+
+/* ----------------------second four Items----------------------- */
+
+.four_list_second {
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    margin-bottom: 8rem;
+    justify-items: center;
+}
+
+
+.four_list_second .p1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 23.5rem;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13),
+     0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
+
+    margin-bottom: 3rem;
+}
+
+
+
+
+.four_list_second .bold_title_box {
+    font-size: var(--text-mlg);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0 1.4rem;
+}
+.four_list_second .description_box {
+    font-size: var(--text-ms);
+    line-height: 1.4;
+    padding: 0 1.4rem;
+}
+
+
+
+.four_list_second .p1 .general_fourIcons {
+    background-color: #3c40c6;
+    margin-top: 3rem;
+    padding: 1rem 1.3rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .3rem;
+    height: 1rem;
+    margin: 2rem 1.4rem 1.5rem 1.4rem ;
+
+
+    align-self: self-start;
+
+}
+
+.four_list_second .p1 .general_fourIcons:hover {
+    background-color: #5156eb;
+}
+
+
+.four_list_second .p1 img {
+    width: 23.5rem;
+    height: 13.78rem;
+    margin-bottom: 2rem;
+    align-self: self-start;
+}
+@media (min-width: 440px) {
+    .four_list_second {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    justify-items: normal;
+    }
+    .four_list_second .p1 {
+        margin-bottom: 0rem;
+        position: relative;
+        padding-bottom: 7rem;
+    }
+    .four_list_second .bold_title_box{
+        font-size: var(--text-xl);
+    }
+    .four_list_second .description_box {
+        font-size: var(--text-md);
+    }
+    .four_list_second .p1 .general_fourIcons {
+        position: absolute;
+        top : 26.2rem;
+    }
+}
+
+
+
+/* -----------------microsoft folgen Icons----------------- */
+.microsoft_folgen  {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center ;
+    margin-bottom: 8rem;
+
+
+}
+.microsoft_folgen .microsoft_icons_folgen img {
+    width: 1.3rem;
+}
+@media (min-width: 440px) {
+    .microsoft_folgen {
+        margin-left: .8rem;
+        justify-content: unset;
+    }
+}
+@media (min-width: 325px) {
+    .microsoft_folgen {
+        gap: 1.3rem;
+    }
+}
+ /* <!------------------------------------- Footer --------------------------------------> */
+
+
+ .footer    {
+    background-color: #f1f2f6;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    gap: 1.5rem;
+ }
+ @media (min-width: 440px) {
+    .footer {
+        flex-direction: row;
+        padding-left: 0;
+        gap: 0;
+    }
+}
+
+ .footer .firstWord_footerList {
+    font-size: var(--text-sm);
+    font-weight: bold;
+ }
+
+ .footer .unternehmen {
+    margin-right: 9.5rem;
+ }
+
+ .footer .neuigkeiten, .microsoft_Store, .bildungswesen ,
+ .entwicklung , .unternehmen, .Unternehmen    {
+    display: flex;
+    flex-direction: column ;
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 */
+    /* margin: 0 3rem 0 7rem; */
+    line-height: 1.8rem;
+    color: #747d8c;
+
+
+ }
+ .footer .neuigkeiten a, .microsoft_Store a, .bildungswesen a,
+  .entwicklung a, .unternehmen a, .Unternehmen a  {
+    text-decoration: none;
+    color: #747d8c;
+    font-size: var(--text-2xs);
+    white-space: nowrap;
+
+ }
+ .footer .neuigkeiten a:hover, .microsoft_Store a:hover, .bildungswesen a:hover,
+  .entwicklung a:hover, .unternehmen a:hover, .Unternehmen a:hover  {
+    text-decoration-line: underline;
+ }
