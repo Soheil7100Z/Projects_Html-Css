@@ -56,9 +56,19 @@ body {
     display: none;
     justify-content: space-between;
     align-items: center;
-    margin: 0 8.9rem;
+    margin: 0 1.9rem;
     font-size: var(--text-sm);
-    /* position: relative; */
+
+}
+.header .nav .left_nav {
+    display: flex;
+    align-content: center;
+    gap: .8rem;
+}
+.header .nav a {
+    text-decoration: none;
+    color: #2d3436;
+
 }
 
 /* -------media to change between Nav------------- */
@@ -72,24 +82,80 @@ body {
 }
 /* --------Large devices Nav--------- */
 
-.header .Micrisoft {
-    position: absolute;
-    top: 1.13rem;
+
+.header .options, .options_860px, .options_871px,
+.options_931px, .options_978px, .options_1160px {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    /* margin-left: 10rem; */
 }
-
-.header .nav a {
-    text-decoration: none;
-    color: #2d3436;
-
-}
-
-.header .options {
+/* .header .options_860p {
     display: flex;
     align-items: center;
     gap: 1.2rem;
     margin-left: 10rem;
+} */
+
+@media (min-width: 860px) {
+    .header .options, .options_860p, .options_871px,
+.options_931px, .options_978px, .options_1160px {
+        display: none;
+    }
+    .header .options_860px {
+        display: flex;
+    }
+}
+@media (min-width: 871px) {
+    .header .options_860px {
+        display: none;
+    }
+    .header .options_871px {
+        display: flex;
+    }
+}
+@media (min-width: 931px) {
+    .header .options_871px {
+        display: none;
+    }
+    .header .options_931px {
+        display: flex;
+    }
+}
+@media (min-width: 978px) {
+    .header .options_931px {
+        display: none;
+    }
+    .header .options_978px {
+        display: flex;
+    }
+}
+@media (min-width: 1160px) {
+    .header .options_978px {
+        display: none;
+    }
+    .header .options_1160px {
+        display: flex;
+    }
+}
+
+@media (min-width: 1310px) {
+    .header .options_1160px {
+        display: none;
+    }
+    .header .options {
+        display: flex;
+    }
 
 }
+@media (min-width: 1700px) {
+    .header .nav  {
+        margin: 0 9rem;
+    }
+}
+
+
+
 .header .right_nav {
     display: flex;
     gap: 1.3rem;
@@ -106,8 +172,17 @@ body {
 .header .macrosoft_list {
     display: flex;
     align-items: center;
+}
 
-
+@media (min-width: 860px) {
+    .header .right_nav .captions_icons {
+        display: none;
+    }
+}
+@media (min-width: 1450px) {
+    .header .right_nav .captions_icons {
+        display: flex;
+    }
 }
 
 .header .checkmark {
