@@ -24,8 +24,9 @@ body {
 .header .for_smallDevices {
     /* max-width: 440px; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 1rem;
 }
 
 .header .for_smallDevices .left {
@@ -61,7 +62,7 @@ body {
 }
 
 /* -------media to change between Nav------------- */
-@media  (min-width: 770px) {
+@media  (min-width: 860px) {
     .header .for_smallDevices {
         display: none;
     }
@@ -170,20 +171,16 @@ body {
     margin-top: 1rem;
     width: 100%;
     height: 18rem;
-
     display: flex;
     background: linear-gradient(160deg, rgba(164, 180, 233, 0.8), rgba(214, 214, 241, 0.842) 60% );
 }
-
 
 .initialBG .left_intialBG .p1 {
     margin: 20rem 1.8rem 0 1.8rem;
     display: grid;
 }
 .initialBG .TheBold_titleOf_slide {
-
     font-size: var(--text-mlg);
-
     font-weight: bold
 }
 .initialBG .description_title {
@@ -202,29 +199,20 @@ body {
     font-size: var(--text-ms);
     height: 1rem;
     width: 10.2rem;
-
-
-
 }
 
 .initialBG .kaufen_icon:hover {
     background-color: #5156eb;
 }
 
-
-
-
 .initialBG .right_initialBG .p1 {
     width: 100%;
     height: 100%;
 }
 
-/* .initialBG .right_initialBG .p1 img {
-    width: inherit;
-    height: inherit;
 
-} */
-@media (min-width: 440px) {
+
+@media (min-width: 860px) {
     .initialBG .initial_linkTag {
         height: 40rem;
     }
@@ -255,38 +243,57 @@ body {
 /* <!-- ------------------five icons under slider------------------------------------------------ --> */
 
 .five_icons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding-top: 23rem;
-    /* margin: 5rem 0rem; */
-    margin: 5rem 0rem;
-    justify-content: center;
+    margin: 5rem 2rem;
+    align-items: center;
+    gap: 2rem;
 
-    gap: 4rem;
 }
-/* @media (min-width: 440px) {
-    .five_icons {
-        padding-top: 20rem;
-    }
-} */
 
 .five_icons a div {
     color: #3c40c6;
     font-weight: bold;
-    font-size: var(--text-ms);
+    font-size: var(--text-xs);
+}
+@media (min-width: 386px) {
+    .five_icons {
+        padding-top: 20rem;
+    }
+}
+@media (min-width: 444px) {
+    .five_icons {
+        padding-top: 18rem;
+    }
+}
+@media (min-width: 444px) {
+    .five_icons {
+        padding-top: 17rem;
+    }
+}
+@media (min-width: 800px) {
+    .five_icons {
+        padding-top: 15rem;
+    }
 }
 
-@media (min-width: 440px) {
+
+@media (min-width: 1328px) {
     .five_icons {
-        padding-top: 0rem;
-        flex-direction: row;
-        align-items: end;
+        padding-top: 0;
         font-size: var(--text-md);
 
     }
     .five_icons a div {
         font-size: var(--text-md);
 
+    }
+  }
+  @media (min-width: 1328px) {
+    .five_icons {
+        display: flex;
+        justify-content: center;
     }
   }
 
@@ -328,46 +335,7 @@ body {
     /* align-self: self-start; */
 }
 
-@media (min-width: 361px) {
-    .four_list .p1 {
-        width: 352px;
-    }
-    .four_list .p1 img {
-        width: 352px;
-    }
-}
-@media (min-width: 376px) {
-    .four_list .p1 {
-        width: 361px;
-    }
-    .four_list .p1 img {
-        width: 361px;
-    }
-}
-@media (min-width: 385px) {
-    .four_list .p1 {
-        width: 367px;
-    }
-    .four_list .p1 img {
-        width: 367px;
-    }
-}
-@media (min-width: 391px) {
-    .four_list .p1 {
-        width: 389px;
-    }
-    .four_list .p1 img {
-        width: 389px;
-    }
-}
-@media (min-width: 413px) {
-    .four_list .p1 {
-        width: 405px;
-    }
-    .four_list .p1 img {
-        width: 405px;
-    }
-}
+
 
 .four_list .bold_title_box {
     font-size: var(--text-mlg);
@@ -398,12 +366,100 @@ body {
     background-color: #5156eb;
 }
  .four_list .p1 .CopilotApp_icon {
-    padding: 1rem 1.3rem 1.8rem 1.3rem;
+    padding: 1rem 1.3rem 2rem 1.3rem;
  }
 
 
 
-@media (min-width: 440px) {
+
+ @media (min-width: 361px) {
+    .four_list .p1 {
+        width: 352px;
+    }
+    .four_list .p1 img {
+        width: 352px;
+    }
+}
+@media (min-width: 376px) {
+    .four_list .p1 {
+        width: 361px;
+    }
+    .four_list .p1 img {
+        width: 361px;
+    }
+    .four_list .p1 .CopilotApp_icon {
+        padding: 1rem 1.3rem 1.2rem 1.3rem;
+     }
+}
+@media (min-width: 385px) {
+    .four_list .p1 {
+        width: 367px;
+    }
+    .four_list .p1 img {
+        width: 367px;
+    }
+}
+@media (min-width: 391px) {
+    .four_list .p1 {
+        width: 389px;
+    }
+    .four_list .p1 img {
+        width: 389px;
+    }
+}
+@media (min-width: 413px) {
+    .four_list .p1 {
+        width: 405px;
+    }
+    .four_list .p1 img {
+        width: 405px;
+    }
+}
+
+@media (min-width: 575px) {
+    .four_list .p1 {
+        width: 553px;
+    }
+    .four_list .p1 img {
+        width: 553px;
+    }
+}
+
+@media (min-width: 580px) {
+    .four_list {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        justify-items: center;
+    }
+    .four_list .p1 {
+        margin-bottom: 2.5rem;
+        position: relative;
+        padding-bottom: 7rem;
+        width: 23.5rem;
+    }
+
+    .four_list .p1.padding_Xbox {
+        padding-bottom: 10rem;
+    }
+
+    .four_list .p1 img {
+        width: 23.5rem;
+        height: 13.78rem;
+        margin-bottom: 2rem;
+        /* align-self: self-start; */
+    }
+    .four_list .p1 .general_fourIcons{
+        position: absolute;
+        top : 25rem;
+        justify-self: self-end;
+    }
+    .four_list .p1 .CopilotApp_icon {
+        padding: 1rem 1.3rem;
+     }
+
+}
+
+@media (min-width: 860px) {
     .four_list {
         display: grid;
         grid-template-columns: repeat(4 , 1fr);
@@ -446,15 +502,10 @@ body {
     display: flex;
     flex-direction: column-reverse;
     justify-self: center;
-     margin: 8rem 0rem 8rem 1.7rem  ;
+    margin: 8rem 0rem 8rem 1.7rem  ;
     text-decoration: none;
     width: 85.8vw;
-
-
 }
-
-
-
 .gamePass_Linktag .left_gamepass {
 
     flex-basis: 35%;
@@ -474,21 +525,15 @@ body {
     margin:2rem 0 3.5rem 0rem;
 }
 
-
-
 .gamePass_Linktag .right_gamepass {
     flex-basis: 65%;
     width: 100%;
     height: 100%;
-
 }
 
 .gamePass_Linktag .right_gamepass img {
     width: inherit;
     height: inherit;
-
-
-
 }
 
 .gamePass_Linktag .kaufenIcon_gamePass {
@@ -497,18 +542,26 @@ body {
     font-size: var(--text-ms);
     color: white;
     padding: .8rem 1rem;
-
     border-radius: .4rem;
-    /* width: 5.9rem; */
     display: inline;
-
-
  }
  .gamePass_Linktag .kaufenIcon_gamePass:hover {
     background-color: #5156eb;
  }
 
- @media (min-width: 440px) {
+
+ @media (min-width: 575px) {
+    .gamePass_Linktag {
+        margin: 8rem 0rem 8rem 2.6rem  ;
+    }
+ }
+ @media (min-width: 600px) {
+    .gamePass_Linktag {
+        margin: 8rem 0rem 8rem 4rem  ;
+    }
+ }
+
+ @media (min-width: 860px) {
     .gamePass_Linktag {
         background-color: #161a1b;
         display: flex;
@@ -552,12 +605,6 @@ body {
     bottom: 100%;
 }
 
-@media (min-width: 440px) {
-
-    .four_list_second .fur_unternehmen {
-        font-size: var(--text-2xl);
-    }
-}
 
 .four_list_second .p1 {
     display: flex;
@@ -576,6 +623,45 @@ body {
     aspect-ratio: 5 / 3;
     margin-bottom: 2rem;
     /* align-self: self-start; */
+}
+
+
+
+
+.four_list_second .bold_title_box {
+    font-size: var(--text-mlg);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0 1.4rem;
+}
+.four_list_second .description_box {
+    font-size: var(--text-ms);
+    line-height: 1.4;
+    padding: 0 1.4rem;
+}
+
+
+
+.four_list_second .p1 .general_fourIcons {
+    background-color: #3c40c6;
+    margin-top: 3rem;
+    padding: 1rem 1.3rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .3rem;
+    height: 1rem;
+    margin: 2rem 1.4rem 1.5rem 1.4rem ;
+
+
+    align-self: self-start;
+
+}
+.four_list_second .p1 .Visual_Studio {
+    padding: 1rem 1.3rem 1rem 1.3rem;
+ }
+
+.four_list_second .p1 .general_fourIcons:hover {
+    background-color: #5156eb;
 }
 
 
@@ -620,47 +706,54 @@ body {
     }
 }
 
-.four_list_second .bold_title_box {
-    font-size: var(--text-mlg);
-    font-weight: bold;
-    margin-bottom: 1rem;
-    padding: 0 1.4rem;
-}
-.four_list_second .description_box {
-    font-size: var(--text-ms);
-    line-height: 1.4;
-    padding: 0 1.4rem;
+@media (min-width: 575px) {
+    .four_list_second .p1 {
+        width: 553px;
+    }
+    .four_list_second .p1 img {
+        width: 553px;
+    }
 }
 
 
+@media (min-width: 580px) {
+    .four_list_second {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        justify-items: center;
 
-.four_list_second .p1 .general_fourIcons {
-    background-color: #3c40c6;
-    margin-top: 3rem;
-    padding: 1rem 1.3rem;
-    color: white;
-    font-weight: bold;
-    border-radius: .3rem;
-    height: 1rem;
-    margin: 2rem 1.4rem 1.5rem 1.4rem ;
+    }
+    .four_list_second .p1 {
+        margin-bottom: 2.5rem;
+        position: relative;
+        padding-bottom: 7rem;
+        width: 23.5rem;
+    }
 
+    .four_list_second .p1.padding_Xbox {
+        padding-bottom: 8.5rem;
+    }
 
-    align-self: self-start;
+    .four_list_second .p1 img {
+        width: 23.5rem;
+        height: 13.78rem;
+        margin-bottom: 2rem;
+        /* align-self: self-start; */
+    }
+    .four_list_second .p1 .general_fourIcons{
+        position: absolute;
+        top : 25rem;
+        justify-self: self-end;
+    }
+    .four_list_second .fur_unternehmen {
+       justify-self: left;
+       margin-left: 1.5rem;
+    }
+
 
 }
-.four_list_second .p1 .Visual_Studio {
-    padding: 1rem 1.3rem 1rem 1.3rem;
- }
 
-.four_list_second .p1 .general_fourIcons:hover {
-    background-color: #5156eb;
-}
-
-
-
-
-
-@media (min-width: 440px) {
+@media (min-width: 860px) {
     .four_list_second {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
@@ -691,6 +784,10 @@ body {
         position: absolute;
         top : 26.2rem;
     }
+    .four_list_second .fur_unternehmen {
+        font-size: var(--text-2xl);
+        margin-left: 0;
+    }
 }
 
 
@@ -708,17 +805,20 @@ body {
 .microsoft_folgen .microsoft_icons_folgen img {
     width: 1.3rem;
 }
-@media (min-width: 440px) {
-    .microsoft_folgen {
-        margin-left: .8rem;
-        justify-content: unset;
-    }
-}
+
 @media (min-width: 325px) {
     .microsoft_folgen {
         gap: 1.3rem;
     }
 }
+
+@media (min-width: 580px) {
+    .microsoft_folgen {
+        margin-left: 1.8rem;
+        justify-content: unset;
+    }
+}
+
  /* <!------------------------------------- Footer --------------------------------------> */
 
 
@@ -731,13 +831,22 @@ body {
     padding-left: 2rem;
     gap: 1.5rem;
  }
- @media (min-width: 440px) {
+ @media (min-width: 580px) {
     .footer {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+ @media (min-width: 860px) {
+    .footer {
+        display: flex;
         flex-direction: row;
         padding-left: 0;
         gap: 0;
     }
 }
+
 
  .footer .firstWord_footerList {
     font-size: var(--text-sm);
