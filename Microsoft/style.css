@@ -280,27 +280,90 @@ body {
     background-color: #5156eb;
 }
 
-.initialBG .right_initialBG .p1 {
-    width: 100%;
-    height: 100%;
+/* ---------------slider with  overlap----------------- */
+.initialBG_with_overlap .slider {
+    display: none;
+    flex-direction: column;
 }
 
+.initialBG_with_overlap .slider .upperLap{
+    margin-top: 1rem;
+    width: 100%;
+    height: 18rem;
+    display: flex;
+    background: linear-gradient(160deg, rgba(164, 180, 233, 0.8), rgba(214, 214, 241, 0.842) 60% );
+}
+.initialBG_with_overlap a {
+    text-decoration: none;
+    color: black;
+}
+.initialBG_with_overlap .lowerLap {
+    padding: 3rem 3rem;
+    background-color: white;
+    margin: -3rem 1.8rem 0 1.8rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13),
+     0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
+
+}
+.initialBG_with_overlap .lowerLap .TheBold_titleOf_slide {
+    font-size: var(--text-mlg);
+    font-weight: bold;
 
 
+
+}
+.initialBG_with_overlap .lowerLap .description_title {
+    font-size: var(--text-ms);
+    line-height: 1.3rem;
+    margin: 1rem 0;
+}
+.initialBG_with_overlap .lowerLap .kaufen_icon  {
+
+    background-color:#3c40c6;
+    padding: 1rem 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: .3rem;
+    text-decoration: none;
+    font-size: var(--text-ms);
+    height: 1rem;
+    width: 10.2rem;
+}
+
+.initialBG_with_overlap .lowerLap .kaufen_icon:hover {
+    background-color: #5156eb;
+}
 @media (min-width: 860px) {
     .initialBG .initial_linkTag {
-        height: 40rem;
+        display: none;
+    }
+    .initialBG_with_overlap .slider {
+        display: flex;
+    }
+}
+
+@media (min-width: 1084px) {
+    .initialBG .initial_linkTag {
+        display: flex;
+        height: 100%;
+
+    }
+    .initialBG_with_overlap .slider {
+        display: none;
+    }
+    .initialBG .initial_linkTag {
+
     }
     .initialBG .left_intialBG {
         display: flex;
         flex-basis: 50%;
     }
     .initialBG .left_intialBG .p1 {
-        margin: 10rem 9rem;
+        margin: 6rem 11rem;
     }
-    .initialBG .right_intialBG {
-        flex-basis: 50%;
-    }
+
     .initialBG .TheBold_titleOf_slide {
         font-size: var(--text-2xl);
     }
@@ -312,25 +375,36 @@ body {
     .initialBG .description_title {
         font-size: var(--text-md);
     }
-  }
+}
 
 
 /* <!-- ------------------five icons under slider------------------------------------------------ --> */
-
 .five_icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-around;
+    margin: 5rem 2rem;
+    padding-top: 25rem;
+}
+/* .five_icons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding-top: 23rem;
     margin: 5rem 2rem;
-    align-items: center;
+    align-content: center;
     gap: 2rem;
 
-}
+} */
+.five_icons a {
+    align-self: flex-end;
 
+}
 .five_icons a div {
     color: #3c40c6;
     font-weight: bold;
     font-size: var(--text-xs);
+
 }
 @media (min-width: 386px) {
     .five_icons {
@@ -352,23 +426,26 @@ body {
         padding-top: 15rem;
     }
 }
-
+@media (min-width: 860px) {
+    .five_icons {
+        padding-top: 0rem;
+    }
+}
 
 @media (min-width: 1328px) {
     .five_icons {
-        padding-top: 0;
         font-size: var(--text-md);
-
     }
     .five_icons a div {
         font-size: var(--text-md);
 
     }
   }
-  @media (min-width: 1328px) {
+  @media (min-width: 1020px) {
     .five_icons {
         display: flex;
         justify-content: center;
+        gap: 3rem;
     }
   }
 
@@ -377,9 +454,9 @@ body {
     /* margin: 0 7rem ; */
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1084px) {
     .lower_container {
-        margin: 0 7rem ;
+        margin: 0 8rem ;
     }
 }
 
@@ -387,27 +464,30 @@ body {
     display: grid;
     grid-template-columns: repeat(1 , 1fr);
     justify-items: center;
-    /* margin: 8rem 5rem; */
-    margin: 8rem 0rem;
-    /* gap: 1rem; */
-    /* justify-self: center; */
+    gap: 25px;
+    margin: 0 2rem;
+
 }
 
 .four_list .p1 {
-    display: flex;
-    flex-direction: column;
-    width: 337px;
+    display: grid;
+    /* flex-direction: column; */
+    width: 100%;
     text-decoration: none;
     color: black;
     box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13),
      0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
     margin-bottom: 3rem;
+    /* position: relative; */
 }
+.four_list .p1 .upper {
+    align-self: self-start;
+}
+
 .four_list .p1 img {
-    width: 337px;
-    aspect-ratio: 5 / 3;
+    width: 100%;
+    height: auto;
     margin-bottom: 2rem;
-    /* align-self: self-start; */
 }
 
 
@@ -421,145 +501,49 @@ body {
 .four_list .description_box {
     font-size: var(--text-ms);
     line-height: 1.4;
-    padding: 0 1.4rem;
+    padding: 0rem 1.4rem;
 }
 
 .four_list .p1 .general_fourIcons {
     background-color: #3c40c6;
-    margin-top: 3rem;
-    padding: 1rem 1.3rem;
+    padding: 1em 1.3em;
     color: white;
     font-weight: bold;
     border-radius: .3rem;
-    height: 1rem;
+    /* height: 1rem; */
     margin: 2rem 1.4rem 1.5rem 1.4rem ;
-    align-self: self-start;
-
+    align-self: self-end;
+    justify-self: left;
 }
 
 .four_list .p1 .general_fourIcons:hover {
     background-color: #5156eb;
 }
  .four_list .p1 .CopilotApp_icon {
-    padding: 1rem 1.3rem 2rem 1.3rem;
+    /* padding: 1rem 1.3rem 2rem 1.3rem; */
  }
 
-
-
-
- @media (min-width: 361px) {
-    .four_list .p1 {
-        width: 352px;
-    }
-    .four_list .p1 img {
-        width: 352px;
-    }
-}
-@media (min-width: 376px) {
-    .four_list .p1 {
-        width: 361px;
-    }
-    .four_list .p1 img {
-        width: 361px;
-    }
-    .four_list .p1 .CopilotApp_icon {
-        padding: 1rem 1.3rem 1.2rem 1.3rem;
-     }
-}
-@media (min-width: 385px) {
-    .four_list .p1 {
-        width: 367px;
-    }
-    .four_list .p1 img {
-        width: 367px;
-    }
-}
-@media (min-width: 391px) {
-    .four_list .p1 {
-        width: 389px;
-    }
-    .four_list .p1 img {
-        width: 389px;
-    }
-}
-@media (min-width: 413px) {
-    .four_list .p1 {
-        width: 405px;
-    }
-    .four_list .p1 img {
-        width: 405px;
-    }
-}
-
-@media (min-width: 575px) {
-    .four_list .p1 {
-        width: 553px;
-    }
-    .four_list .p1 img {
-        width: 553px;
-    }
-}
 
 @media (min-width: 580px) {
     .four_list {
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
-        justify-items: center;
     }
     .four_list .p1 {
         margin-bottom: 2.5rem;
         position: relative;
-        padding-bottom: 7rem;
-        width: 23.5rem;
     }
 
-    .four_list .p1.padding_Xbox {
-        padding-bottom: 10rem;
-    }
-
-    .four_list .p1 img {
-        width: 23.5rem;
-        height: 13.78rem;
-        margin-bottom: 2rem;
-        /* align-self: self-start; */
-    }
-    .four_list .p1 .general_fourIcons{
-        position: absolute;
-        top : 25rem;
-        justify-self: self-end;
-    }
-    .four_list .p1 .CopilotApp_icon {
-        padding: 1rem 1.3rem;
-     }
 
 }
 
-@media (min-width: 860px) {
+@media (min-width: 1084px) {
     .four_list {
         display: grid;
         grid-template-columns: repeat(4 , 1fr);
-        justify-items: normal;
+
     }
-    .four_list .p1 {
-        margin-bottom: 0rem;
-        position: relative;
-        padding-bottom: 7rem;
-        width: 23.5rem;
-    }
-    .four_list .p1 img {
-        width: 23.5rem;
-        height: 13.78rem;
-        margin-bottom: 2rem;
-        /* align-self: self-start; */
-    }
-    .four_list .p1 .general_fourIcons{
-        position: absolute;
-        top : 25rem;
-        align-self: normal;
-    }
-    .four_list .p1 .CopilotApp_icon {
-        padding: 1rem 1.3rem;
-     }
+
     .four_list .bold_title_box {
         font-size: var(--text-xl);
     }
@@ -569,46 +553,113 @@ body {
     }
 }
 
+/* -----------------game pass part up to 1083.99 px---------------------------  */
+.game_pass_lower_1084 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 
-/* <!--------------------- game pass part ---------------------------------------> */
 
-.gamePass_Linktag {
-    background-color: white;
+}
+.game_pass_lower_1084 .gamePass_Linktag_lower_1084 {
     display: flex;
     flex-direction: column-reverse;
-    justify-self: center;
-    margin: 8rem 0rem 8rem 1.7rem  ;
+    margin: 8rem 0rem   ;
     text-decoration: none;
-    width: 85.8vw;
-}
-.gamePass_Linktag .left_gamepass {
-
-    flex-basis: 35%;
+    width: 89%;
     color: black;
-    margin: 3rem 2rem;
-    align-content: center;
+
 }
 
-.gamePass_Linktag .title_gamePass {
+.game_pass_lower_1084 .left_gamepass_lower_1084 {
+    margin: 1.5rem 1rem ;
+    /* align-content: center; */
+    /* flex-basis: 50%; */
+}
+
+.gamePass_Linktag_lower_1084 .right_gamepass_lower_1084 img {
+    width: 100%;
+    height: auto;
+
+}
+.game_pass_lower_1084 .gamePass_Linktag_lower_1084 .title_gamePass_lower_1084 {
     font-size: var(--text-xl);
     font-weight: bold;
 
 }
-.gamePass_Linktag .description_gamePass {
+.game_pass_lower_1084 .gamePass_Linktag_lower_1084 .description_gamePass_lower_1084 {
     font-size: var(--text-ms);
-    line-height: 1.4;
-    margin:2rem 0 3.5rem 0rem;
+    line-height: 1;
+    margin: 1.5rem 0 3rem 0rem;
 }
 
-.gamePass_Linktag .right_gamepass {
-    flex-basis: 65%;
+.game_pass_lower_1084 .gamePass_Linktag_lower_1084 .kaufenIcon_gamePass_lower_1084 {
+    background-color: #3c40c6;
+    font-weight: bold;
+    font-size: var(--text-ms);
+    color: white;
+    padding: 1em 1em;
+    border-radius: .4rem;
+    display: inline;
+ }
+ .game_pass_lower_1084 .gamePass_Linktag_lower_1084 .kaufenIcon_gamePass_lower_1084:hover {
+    background-color: #5156eb;
+ }
+ @media (min-width: 1084px) {
+    .game_pass_lower_1084 .gamePass_Linktag_lower_1084  {
+        display: none;
+    }
+    .game_pass .gamePass_Linktag{
+        display: flex;
+    }
+ }
+
+/* <!--------------------- game pass part from 1048---------------------------------------> */
+.game_pass {
+    display: flex;
+    justify-content: center;
+
+}
+
+.gamePass_Linktag {
+    background-color: black;
+    display: none;
+    margin: 8rem 0rem   ;
+    text-decoration: none;
     width: 100%;
-    height: 100%;
+
+}
+@media (min-width: 1500px) {
+    .gamePass_Linktag {
+        max-width: 1527px;
+    }
+ }
+
+.gamePass_Linktag .left_gamepass {
+
+
+    color: white;
+    margin: 4rem 3rem 4rem 3rem;
+    align-content: center;
+    flex-basis: 35%;
 }
 
 .gamePass_Linktag .right_gamepass img {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: auto;
+
+}
+
+
+.gamePass_Linktag .title_gamePass {
+    font-size: var(--text-mlg);
+    font-weight: bold;
+
+}
+.gamePass_Linktag .description_gamePass {
+    font-size: var(--text-xs);
+    line-height: 1;
+    margin: 1.5rem 0 2rem 0rem;
 }
 
 .gamePass_Linktag .kaufenIcon_gamePass {
@@ -616,7 +667,7 @@ body {
     font-weight: bold;
     font-size: var(--text-ms);
     color: white;
-    padding: .8rem 1rem;
+    padding: .5em .5em;
     border-radius: .4rem;
     display: inline;
  }
@@ -624,51 +675,36 @@ body {
     background-color: #5156eb;
  }
 
+ @media (min-width: 1300px) {
 
- @media (min-width: 575px) {
-    .gamePass_Linktag {
-        margin: 8rem 0rem 8rem 2.6rem  ;
-    }
- }
- @media (min-width: 600px) {
-    .gamePass_Linktag {
-        margin: 8rem 0rem 8rem 4rem  ;
-    }
- }
-
- @media (min-width: 860px) {
-    .gamePass_Linktag {
-        background-color: #161a1b;
-        display: flex;
-        flex-direction: row;
-        margin: 8rem 0rem;
-    }
-    .gamePass_Linktag .left_gamepass {
-        margin: 12rem 8rem;
-        color: white;
+    .gamePass_Linktag .left_gamepass{
+        margin: 4rem 5rem 4rem 5rem;
     }
     .gamePass_Linktag .title_gamePass {
-        font-size: var(--text-3xl);
+        font-size: var(--text-2xl);
     }
     .gamePass_Linktag .description_gamePass {
-        font-size: var(--text-md);
+        font-size: var(--text-ms);
+        line-height: 1.2;
+        margin: 1.5rem 0 2.8rem 0rem;
     }
     .gamePass_Linktag .kaufenIcon_gamePass {
+        padding: .7em .9em;
         font-size: var(--text-md);
-        padding: 1rem 1.3rem;
-        /* width: 5.9rem; */
     }
 
  }
 
-/* ----------------------second four Items----------------------- */
+
+/* ---------------second four Items-----and------fur_unternehmen-------------------- */
 
 .four_list_second {
     display: grid;
     grid-template-columns: repeat(1 , 1fr);
-    margin-bottom: 8rem;
     justify-items: center;
     position: relative;
+    gap: 25px;
+    margin: 0 2rem;
 
 }
 
@@ -680,24 +716,24 @@ body {
     bottom: 100%;
 }
 
-
+/* ------------------------------------------------------------------+ */
 .four_list_second .p1 {
-    display: flex;
-    flex-direction: column;
-    width: 337px;
+    display: grid;
+    width: 100%;
     text-decoration: none;
     color: black;
     box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13),
      0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
-
-    margin-bottom: 3rem;
+}
+.four_list_second .p1 .upper {
+    align-self: self-start;
 }
 
 .four_list_second .p1 img {
-    width: 337px;
-    aspect-ratio: 5 / 3;
+    width: 100%;
+    height: auto;
     margin-bottom: 2rem;
-    /* align-self: self-start; */
+
 }
 
 
@@ -708,6 +744,7 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     padding: 0 1.4rem;
+
 }
 .four_list_second .description_box {
     font-size: var(--text-ms);
@@ -720,19 +757,20 @@ body {
 .four_list_second .p1 .general_fourIcons {
     background-color: #3c40c6;
     margin-top: 3rem;
-    padding: 1rem 1.3rem;
+    padding: 1em 1.3em;
     color: white;
     font-weight: bold;
     border-radius: .3rem;
-    height: 1rem;
+    /* height: 1rem; */
     margin: 2rem 1.4rem 1.5rem 1.4rem ;
+    align-self: self-end;
+    justify-self: left;
 
-
-    align-self: self-start;
 
 }
+
 .four_list_second .p1 .Visual_Studio {
-    padding: 1rem 1.3rem 1rem 1.3rem;
+    /* padding: 1rem 1.3rem 2rem 1.3rem; */
  }
 
 .four_list_second .p1 .general_fourIcons:hover {
@@ -740,86 +778,17 @@ body {
 }
 
 
-@media (min-width: 361px) {
-    .four_list_second .p1 {
-        width: 352px;
-    }
-    .four_list_second .p1 img {
-        width: 352px;
-    }
-}
-@media (min-width: 376px) {
-    .four_list_second .p1 {
-        width: 361px;
-    }
-    .four_list_second .p1 img {
-        width: 361px;
-    }
-}
-@media (min-width: 385px) {
-    .four_list_second .p1 {
-        width: 367px;
-    }
-    .four_list_second .p1 img {
-        width: 367px;
-    }
-}
-@media (min-width: 391px) {
-    .four_list_second .p1 {
-        width: 389px;
-    }
-    .four_list_second .p1 img {
-        width: 389px;
-    }
-}
-@media (min-width: 413px) {
-    .four_list_second .p1 {
-        width: 405px;
-    }
-    .four_list_second .p1 img {
-        width: 405px;
-    }
-}
-
-@media (min-width: 575px) {
-    .four_list_second .p1 {
-        width: 553px;
-    }
-    .four_list_second .p1 img {
-        width: 553px;
-    }
-}
-
 
 @media (min-width: 580px) {
     .four_list_second {
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
-        justify-items: center;
-
     }
     .four_list_second .p1 {
         margin-bottom: 2.5rem;
         position: relative;
-        padding-bottom: 7rem;
-        width: 23.5rem;
     }
 
-    .four_list_second .p1.padding_Xbox {
-        padding-bottom: 8.5rem;
-    }
-
-    .four_list_second .p1 img {
-        width: 23.5rem;
-        height: 13.78rem;
-        margin-bottom: 2rem;
-        /* align-self: self-start; */
-    }
-    .four_list_second .p1 .general_fourIcons{
-        position: absolute;
-        top : 25rem;
-        justify-self: self-end;
-    }
     .four_list_second .fur_unternehmen {
        justify-self: left;
        margin-left: 1.5rem;
@@ -828,40 +797,19 @@ body {
 
 }
 
-@media (min-width: 860px) {
+@media (min-width: 1084px) {
     .four_list_second {
-    display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    justify-items: normal;
+        display: grid;
+        grid-template-columns: repeat(4 , 1fr);
+
     }
-    .four_list_second .p1 {
-        max-width: 23.5rem;
-        margin-bottom: 0rem;
-        position: relative;
-        padding-bottom: 7rem;
-    }
-    .four_list_second .p1 img {
-        width: 23.5rem;
-        height: 13.78rem;
-        margin-bottom: 2rem;
-        align-self: self-start;
-    }
-    .four_list_second .p1 .Visual_Studio {
-        padding: 1rem 1.3rem;
-     }
-    .four_list_second .bold_title_box{
+
+    .four_list_second .bold_title_box {
         font-size: var(--text-xl);
     }
+
     .four_list_second .description_box {
         font-size: var(--text-md);
-    }
-    .four_list_second .p1 .general_fourIcons {
-        position: absolute;
-        top : 26.2rem;
-    }
-    .four_list_second .fur_unternehmen {
-        font-size: var(--text-2xl);
-        margin-left: 0;
     }
 }
 
@@ -873,7 +821,7 @@ body {
     gap: 1rem;
     justify-content: center;
     align-items: center ;
-    margin-bottom: 8rem;
+    margin: 5rem 0;
 
 
 }
@@ -913,12 +861,12 @@ body {
     }
 }
 
- @media (min-width: 860px) {
+ @media (min-width: 1084px) {
     .footer {
         display: flex;
         flex-direction: row;
-        padding-left: 0;
-        gap: 0;
+        padding-left: 3rem;
+
     }
 }
 
@@ -929,7 +877,7 @@ body {
  }
 
  .footer .unternehmen {
-    margin-right: 9.5rem;
+    /* margin-right: 9.5rem; */
  }
 
  .footer .neuigkeiten, .microsoft_Store, .bildungswesen ,
