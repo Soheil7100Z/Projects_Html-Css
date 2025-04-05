@@ -5,7 +5,9 @@ html{
 body {
     margin-top: 1rem;
 }
-
+/* *, *::before, *::after {
+    box-sizing: border-box;
+  } */
 :root {
     --text-2xs : 0.7rem;
     --text-xs : 0.8rem;
@@ -22,7 +24,6 @@ body {
 
 /* ------- small devices Nav---------- */
 .header .for_smallDevices {
-    /* max-width: 440px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,12 +91,7 @@ body {
     gap: 1.2rem;
     /* margin-left: 10rem; */
 }
-/* .header .options_860p {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-left: 10rem;
-} */
+
 
 @media (min-width: 860px) {
     .header .options, .options_860p, .options_871px,
@@ -212,7 +208,6 @@ body {
 .header .auto_list {
     background-color: #e9ebee;
     width: 65% ;
-    /* height:  30rem; */
     display: none;
     position: absolute;
     top: 4rem;
@@ -226,7 +221,6 @@ body {
     line-height: 2.5rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: right; */
     white-space: nowrap;
     font-size: var(--text-xs);
     margin: 1rem 1rem 0 2rem ;
@@ -387,15 +381,7 @@ body {
     margin: 5rem 2rem;
     padding-top: 25rem;
 }
-/* .five_icons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding-top: 23rem;
-    margin: 5rem 2rem;
-    align-content: center;
-    gap: 2rem;
 
-} */
 .five_icons a {
     align-self: flex-end;
 
@@ -450,9 +436,6 @@ body {
   }
 
 /* <!-- ------------------Items for sales , four lists-------------------------- --> */
-.lower_container {
-    /* margin: 0 7rem ; */
-}
 
 @media (min-width: 1084px) {
     .lower_container {
@@ -471,14 +454,12 @@ body {
 
 .four_list .p1 {
     display: grid;
-    /* flex-direction: column; */
     width: 100%;
     text-decoration: none;
     color: black;
     box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13),
      0 .0625rem .125rem 0 rgba(0, 0, 0, .11);
     margin-bottom: 3rem;
-    /* position: relative; */
 }
 .four_list .p1 .upper {
     align-self: self-start;
@@ -510,7 +491,6 @@ body {
     color: white;
     font-weight: bold;
     border-radius: .3rem;
-    /* height: 1rem; */
     margin: 2rem 1.4rem 1.5rem 1.4rem ;
     align-self: self-end;
     justify-self: left;
@@ -519,9 +499,7 @@ body {
 .four_list .p1 .general_fourIcons:hover {
     background-color: #5156eb;
 }
- .four_list .p1 .CopilotApp_icon {
-    /* padding: 1rem 1.3rem 2rem 1.3rem; */
- }
+
 
 
 @media (min-width: 580px) {
@@ -573,8 +551,7 @@ body {
 
 .game_pass_lower_1084 .left_gamepass_lower_1084 {
     margin: 1.5rem 1rem ;
-    /* align-content: center; */
-    /* flex-basis: 50%; */
+
 }
 
 .gamePass_Linktag_lower_1084 .right_gamepass_lower_1084 img {
@@ -619,6 +596,7 @@ body {
     display: flex;
     justify-content: center;
 
+
 }
 
 .gamePass_Linktag {
@@ -626,7 +604,9 @@ body {
     display: none;
     margin: 8rem 0rem   ;
     text-decoration: none;
-    width: 100%;
+    width: 94%;
+    overflow: hidden;
+
 
 }
 @media (min-width: 1500px) {
@@ -634,10 +614,12 @@ body {
         max-width: 1527px;
     }
  }
-
+.gamePass_Linktag .right_gamepass {
+    overflow: hidden;
+}
 .gamePass_Linktag .left_gamepass {
 
-
+    overflow: hidden;
     color: white;
     margin: 4rem 3rem 4rem 3rem;
     align-content: center;
@@ -647,6 +629,7 @@ body {
 .gamePass_Linktag .right_gamepass img {
     width: 100%;
     height: auto;
+
 
 }
 
@@ -707,17 +690,18 @@ body {
     margin: 0 2rem;
 
 }
-
-.four_list_second .fur_unternehmen {
-    font-size: var(--text-mlg);
-    font-weight: bold;
-    margin-bottom: 1.2rem;
+/* ------------------------------------------------------------------+ */
+.four_list_second .Tagunternehmen::before {
+    content: "Für Unternehmen";
     position: absolute;
-    bottom: 100%;
+    top: -3rem;
+    font-size: var(--text-xl);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-/* ------------------------------------------------------------------+ */
 .four_list_second .p1 {
+
     display: grid;
     width: 100%;
     text-decoration: none;
@@ -769,9 +753,7 @@ body {
 
 }
 
-.four_list_second .p1 .Visual_Studio {
-    /* padding: 1rem 1.3rem 2rem 1.3rem; */
- }
+
 
 .four_list_second .p1 .general_fourIcons:hover {
     background-color: #5156eb;
